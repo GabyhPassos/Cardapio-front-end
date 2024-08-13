@@ -1,10 +1,12 @@
 import "./App.css";
-import { MenuItem } from "./features/menu/components/MenuItem";
+import { ListaMenu } from "./features/menu/components/ListaMenu";
+//import { MenuItem } from "./features/menu/components/MenuItem";~
+
 
 function App() {
   return (
     <>
-      <MenuItem />;
+      <ListaMenu />;
     </>
   );
 }
