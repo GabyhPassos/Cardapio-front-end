@@ -5,9 +5,13 @@ function Car(props: { brand: string | number | boolean | ReactElement<any, strin
 }
   export const ListaMenu = () => {
   const cars = [
-    {id: 1, brand: 'Ford'},
-    {id: 2, brand: 'BMW'},
-    {id: 3, brand: 'Audi'}
+    {id: 1, brand: 'Brigadeiro'}
+    {id: 2, brand: 'Cookies recheado'}
+    {id: 3, brand: 'Cone trunfado'}
+    {id: 4, brand: 'Mini bolo'}
+    {id: 5, brand: 'Kit brigadeiro'}
+    {id: 6, brand: 'Copo da felicidade'}
+
   ];
   return (
     <>
