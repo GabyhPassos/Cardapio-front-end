@@ -5,17 +5,17 @@ function Car(props: { brand: string | number | boolean | ReactElement<any, strin
 }
   export const ListaMenu = () => {
   const cars = [
-    {id: 1, brand: 'Brigadeiro'}
-    {id: 2, brand: 'Cookies recheado'}
-    {id: 3, brand: 'Cone trunfado'}
-    {id: 4, brand: 'Mini bolo'}
-    {id: 5, brand: 'Kit brigadeiro'}
-    {id: 6, brand: 'Copo da felicidade'}
+    {id: 1, brand: 'Brigadeiro'},   
+    {id: 2, brand: 'Cookies recheado'},
+    {id: 3, brand: 'Cone trunfado'},
+    {id: 4, brand: 'Mini bolo'},
+    {id: 5, brand: 'Kit brigadeiro'},
+    {id: 6, brand: 'Copo da felicidade'},
 
   ];
   return (
     <>
-      <h1>Who lives in my garage?</h1>
+      <h1>Não deixe para amanhã o docinho que você pode comer hoje!</h1>
       <ul>
         {cars.map((car) => <Car key={car.id} brand={car.brand} />)}
       </ul>
