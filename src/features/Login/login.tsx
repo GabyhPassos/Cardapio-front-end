@@ -1,11 +1,10 @@
-import React from "react";
-import { useForm } from "react-hook-form";
+import { useForm } from "renumact-hook-form";
 import "./App.css";
 
 function Login() {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (data: any) => console.log(data);
 
     return (
         <>

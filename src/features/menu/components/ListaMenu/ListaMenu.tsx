@@ -1,7 +1,7 @@
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
 
 function Car(props: { brand: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) {
-  return <li>I am a { props.brand }</li>;
+  return <li>{ props.brand }</li>;
 }
   export const ListaMenu = () => {
   const cars = [
