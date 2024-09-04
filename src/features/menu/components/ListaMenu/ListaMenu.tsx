@@ -1,3 +1,4 @@
+import React from "react";
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
 
 function Car(props: { brand: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) {

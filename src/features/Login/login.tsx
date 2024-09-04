@@ -1,8 +1,10 @@
-import { useForm } from "form- git statusreact";
+import React from "react";
 import "./App.css";
 
 function Login() {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = async (params:type) => {
+        useForm
+    }();
 
     const onSubmit = (data: any) => console.log(data);
 
@@ -22,3 +24,7 @@ function Login() {
     );
 }
 export default Login;
+
+function useForm(): { register: any; handleSubmit: any; formState: { errors: any; }; } {
+    throw new Error("Function not implemented.");
+}
