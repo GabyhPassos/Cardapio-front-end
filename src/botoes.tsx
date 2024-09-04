@@ -1,25 +1,29 @@
-import { MouseEvent } from "react";
 import React from "react";
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
+function Car(props: { brand: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) {
+  return <li>{ props.brand }</li>;
+}
+  export const Botoes = () => {
+  const cars = [
 
-const AppBody = () => {
-
-  function handleClick(event: MouseEvent) {
+  
     <><form>
-    <input type='text' placeholder='Digite o seu e-mail' />;
-    'Senha' , /{">"}
-    <Button onClick={() => { alert('clicado'); } }>Entrar</Button>
-
-   "{"}"}
-
-  function handleClick(e: any, p0: string) {
+    
+      <input type='text' placeholder='Digite o seu e-mail' />;
+      'Senha' , /{">"}
+      < button onClick={() => { alert('clicado'); } }>Entrar</button>
     </form><form>
-    <input type='text' placeholder='Digite o seu nome' /> ;
-    'Digite seu e-mail' ;
-    'Digite seu telefone' ;
-    'Crie uma senha' , /{">"}
-    <Button onClick={() => { alert('clicado'); } }>Primeiro acesso</Button>
-  </form></>
+        <input type='text' placeholder='Digite o seu nome' /> ;
+        'Digite seu e-mail' ;
+        'Digite seu telefone' ;
+        'Crie uma senha' , /{">"}
+        <button onClick={() => { alert('clicado'); } }>Primeira acesso</button>
+      </form></>
+  ];
 
-  }
 
-  export default AppBody;}
+<div className="button-container">
+  <button> - </button>
+  <button> + </button>
+
+</div> }
