@@ -14,7 +14,7 @@ export const Login = () => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Digite seu usuário:
+        Digite seu Telefone:
         <input
           type="text"
           required
