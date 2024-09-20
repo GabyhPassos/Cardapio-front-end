@@ -69,7 +69,7 @@
   
   body {
     color:purple;
-    background-color:pink;
+    background-color:white;
   }
 
 html, body, #root {
@@ -85,3 +85,13 @@ html{
 h1, h2, h3, h4, h5, h6, p, span, button {
     color: white;
 }
+
+<style>
+    body{
+        background-image: url('https://i.pinimg.com/736x/7e/33/40/7e334048206b63df9e4ec25aed9d4c89.jpg/imagem.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    };
+
+</style>
