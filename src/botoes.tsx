@@ -8,6 +8,9 @@ function Car(props: { brand: string | number | boolean | ReactElement<any, strin
 
   
     <><form>
+      function Login () ={">"} loginFunction() {
+        
+      }
     
       <input type='text' placeholder='Digite o seu e-mail' />;
       'Senha' , /{">"}

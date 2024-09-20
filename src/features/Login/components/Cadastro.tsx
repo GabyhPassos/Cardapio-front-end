@@ -1,21 +1,16 @@
-import React from "react";
+import React , { useState } from "react";
 
 export const Cadastro = () => {
-  function setName(value: string): void {
-    throw new Error("Function not implemented.");
-  }
+  const [Name, setName] = useState('')
+  const [Telephone, setTelephone ] = useState('')
+  const [passw, setPassw] = useState('')
 
-  function setTelephone(value: string): void {
-    throw new Error("Function not implemented.");
-  }
-  
-  function setemail(value: string): void {
-    throw new Error("Function not implemented.");
-  }
-  
-  function setpassword(value: password): void {
-    throw new Error("Function not implemented.");
-  }
+  const handleSubmit = (event) => {
+    event.prevenDefault();
+    alert('Disparar request Cadastro')
+  };
+
+
 
 
 
@@ -40,27 +35,19 @@ export const Cadastro = () => {
           type="text"
           required
           name="Name"
-          value={string}
+          value={Name}
           onChange={(e) => setName(e.target.value)}
         />
       </label>
       <label>Digite seu telefone:
         <input
-          type="telephone"
+          type="Telephone"
           required
-          name="telephone"
-          value={sring}
+          name="Telephone"
+          value={Telephone}
           onChange={(e) => setTelephone(e.target.value)}
         />
       </label>
-      <label>Digite seu email:
-        <input
-          type="email"
-          required
-          name="email"
-          value={string}
-          onChange={(e) => setemail(e.target.value)}
-        />
       </label>
       <label>Crie uma senha:
         <input
@@ -72,12 +59,9 @@ export const Cadastro = () => {
         />
       </label>
       <input type="submit" />
-    </form>
+        </form>
   );
 };
 
-    </div>
-  );
-}
 
 export default Cadastro
