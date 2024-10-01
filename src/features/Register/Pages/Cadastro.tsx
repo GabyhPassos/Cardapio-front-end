@@ -1,6 +1,7 @@
 import React , { useState } from "react";
 
 export const Cadastro = () => {
+  // variaveis e function daqui pra baixo
   const [Name, setName] = useState('')
   const [Telephone, setTelephone ] = useState('')
   const [passw, setPassw] = useState('')
@@ -9,14 +10,6 @@ export const Cadastro = () => {
     event.prevenDefault();
     alert('Disparar request Cadastro')
   };
-
-
-
-
-
-
-
-  // variaveis e function daqui pra baixo
 
   // html e css daqui pra baixo
   return (
@@ -48,7 +41,6 @@ export const Cadastro = () => {
           onChange={(e) => setTelephone(e.target.value)}
         />
       </label>
-      </label>
       <label>Crie uma senha:
         <input
           type="password"
@@ -60,7 +52,7 @@ export const Cadastro = () => {
       </label>
       <input type="submit" />
         </form>
-  );
+    </div>
 };
 
 

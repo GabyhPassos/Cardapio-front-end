@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { postLogin } from "../../../modules/apiLogin/indext";
 
 export const Login = () => {
   // variaveis e function daqui pra pra baixo
@@ -7,7 +8,18 @@ export const Login = () => {
 
   const handleSubmit = (event) => {
     event.prevenDefault();
-    alert('Disparar request Login')
+    event.stopPropagation();
+    const dataLogin =  {
+      user: user,
+      passw: passw
+    }
+    postLogin(dataLogin)
+    .then(
+      () => console.log('LOGIN OK')
+    )
+    .catch(
+      () => console.log('LOGIN ERROR')
+    )
   };
 
   // html e css daqui pra baixo
