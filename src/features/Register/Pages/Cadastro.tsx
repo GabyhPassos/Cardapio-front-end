@@ -11,6 +11,22 @@ export const Cadastro = () => {
     alert('Disparar request Cadastro')
   };
 
+  const handleSubmit = (event) => {
+    event.prevenDefault();
+    event.stopPropagation();
+    const dataCadastro =  {
+      user: user,
+      passw: passw
+    }
+    postLogin(dataCadastro)
+    .then(
+      () => console.log('CADASTRO OK')
+    )
+    .catch(
+      () => console.log('CADASTRO ERROR')
+    )
+  };
+
   // html e css daqui pra baixo
   return (
     <div
