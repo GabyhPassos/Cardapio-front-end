@@ -1,33 +1,29 @@
-import React , { useState } from "react";
+import React, { useState } from "react";
+import { postCadastro } from "../../../modules/apiCadastro/indext";
 
 export const Cadastro = () => {
-  // variaveis e function daqui pra baixo
-  const [Name, setName] = useState('')
-  const [Telephone, setTelephone ] = useState('')
-  const [passw, setPassw] = useState('')
+  // State variables
+  const [Name, setName] = useState('');
+  const [Telephone, setTelephone] = useState('');
+  const [passw, setPassw] = useState('');
 
+  // Handle form submission
   const handleSubmit = (event) => {
-    event.prevenDefault();
-    alert('Disparar request Cadastro')
-  };
-
-  const handleSubmit = (event) => {
-    event.prevenDefault();
+    event.preventDefault(); // Correct spelling
     event.stopPropagation();
-    const dataCadastro =  {
-      user: user,
-      passw: passw
-    }
-    postLogin(dataCadastro)
-    .then(
-      () => console.log('CADASTRO OK')
-    )
-    .catch(
-      () => console.log('CADASTRO ERROR')
-    )
+    
+    const dataCadastro = {
+      name: Name,
+      telephone: Telephone,
+      passw: passw,
+    };
+
+    postCadastro(dataCadastro)
+      .then(() => console.log('CADASTRO OK'))
+      .catch(() => console.log('CADASTRO ERROR'));
   };
 
-  // html e css daqui pra baixo
+  // JSX for rendering the form
   return (
     <div
       style={{
@@ -35,41 +31,47 @@ export const Cadastro = () => {
         minHeight: "100vh",
         display: "flex",
         justifyContent: "center",
+        alignItems: "center", // Align content to center vertically
       }}
     >
-       <form onSubmit={handleSubmit}>
-      <label>
-        Digite seu Nome:
-        <input
-          type="text"
-          required
-          name="Name"
-          value={Name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-      <label>Digite seu telefone:
-        <input
-          type="Telephone"
-          required
-          name="Telephone"
-          value={Telephone}
-          onChange={(e) => setTelephone(e.target.value)}
-        />
-      </label>
-      <label>Crie uma senha:
-        <input
-          type="password"
-          required
-          name="passw"
-          value={passw}
-          onChange={(e) => setPassw(e.target.value)}
-        />
-      </label>
-      <input type="submit" />
-        </form>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Digite seu Nome:
+          <input
+            type="text"
+            required
+            name="Name"
+            value={Name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Digite seu telefone:
+          <input
+            type="text"
+            required
+            name="Telephone"
+            value={Telephone}
+            onChange={(e) => setTelephone(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Crie uma senha:
+          <input
+            type="password" // Use 'password' to mask input
+            required
+            name="passw"
+            value={passw}
+            onChange={(e) => setPassw(e.target.value)}
+          />
+        </label>
+        <br />
+        <input type="submit" value="Cadastrar" />
+      </form>
     </div>
+  );
 };
 
-
-export default Cadastro
+export default Cadastro;
