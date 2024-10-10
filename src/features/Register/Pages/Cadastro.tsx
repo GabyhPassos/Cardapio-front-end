@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { postCadastro } from "../../../modules/apiCadastro/indext";
+import { postCadastro } from "../../../modules/apiCadastro/index";
 
 export const Cadastro = () => {
   // State variables
@@ -9,7 +9,7 @@ export const Cadastro = () => {
 
   // Handle form submission
   const handleSubmit = (event) => {
-    event.preventDefault(); // Correct spelling
+    event.preventDefault();
     event.stopPropagation();
     
     const dataCadastro = {

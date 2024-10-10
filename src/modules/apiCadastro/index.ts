@@ -5,8 +5,9 @@ const variablesApi = {
 };
 
 export type bodyCadastro = {
-  user: string;
-  passw: string;
+  name: string,
+  telephone: string,
+  passw: string,
 };
 
 export const postCadastro = async (body: bodyCadastro) => {
