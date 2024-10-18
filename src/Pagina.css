@@ -94,25 +94,4 @@ h1, h2, h3, h4, h5, h6, p, span, button {
 
     };
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      /* Define a imagem de fundo */
-      background-image: url('C:\Users\AMD\Downloads\Coisas da Gaby.jpg');
-      /* Tamanho da imagem para cobrir a tela inteira */
-      background-size: cover;
-      /* Para que a imagem não se repita */
-      background-repeat: no-repeat;
-      /* Centraliza a imagem */
-      background-position: center;
-      /* Fixa a imagem enquanto a página rola */
-      background-attachment: fixed;
-  }
-  
-  .content {
-      color: white;
-      text-align: center;
-      padding: 100px;
-  }
 </style>
