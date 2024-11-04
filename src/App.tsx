@@ -6,10 +6,10 @@ import { Login } from "./features/Login/pages/Login";
 
 function App() {
   return (
-    <>
+    <div id='root' style={{ backgroundImage: "url(src/assets/fundo.jpg)"}}>
       <Login />
       {/* tag de cadastro aqui por enquanto */}
-    </>
+    </div>
   );
 }
 
